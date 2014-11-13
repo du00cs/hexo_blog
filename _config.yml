@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Stay Hungry, Stay Foolish
-subtitle: 活到老，学到老
-description: 从Qzone到天涯到163到百度到新浪，与其拿自己去适配鞋子，不如给自己打造一双。 
+title: Oh Captain, My Captain - Du00
+subtitle: Qzone-天涯-163-百度-新浪，削足适履，不如亲手打造 
+description: Du00的博客
 author: Du00
 email: du00cs@gmail.com
 language: zh-CN
@@ -87,3 +87,6 @@ exclude_generator:
 deploy:
   type: github
   repo: https://github.com/du00cs/du00cs.github.io.git
+
+plugins:
+- hexo-renderer-mathjax

@@ -1,10 +1,15 @@
 title: Spark/Scala手把手，一步一步向前走
 date: 2014-11-11 15:09:26
-tags: spark/scala
-categories: spark
+tags: 
+- Spark
+- Scala
+categories: 
+- Spark
 ---
-
+Spark/Scala的一点入门材料，希望能对想快速了解的人有所帮助，对自己则是一个备忘。
 ## Scala极速入门
+如果需要一些感性认识，可以先读一读Scala的[官方介绍](http://www.scala-lang.org/what-is-scala.html)。简单地说，Scala是一种更偏函数式的函数式、命令式的混合编程语言，同时也是面向对象的，函数是顶级对象，运行在Java虚拟机上，能与Java无缝结合。
+
 ```scala
 package com.xiaomi.data.ctr.feature.analysis
 
@@ -79,19 +84,20 @@ object test {
 - 书籍：多看上面是有本书的——《[Scala程序设计：Java虚拟机多核编程实战](http://www.duokan.com/book/68639)》，其它的还有很多，如《**Scala for the Impatient**》，《**Programming in Scala: A comprehensive Step-by-step Guide**》
 - [Coursera](https://class.coursera.org)上有一门用Scala讲的函数式编程语言的课——*Functional Programming Principles in Scala*，需要注意的是可能从头学到尾都不知道还有`var`这个东西，因为这门课真的只讲函数式编程。另外，请不要惊讶做作业需要花很长时间。   
 如果你是跟我一样的懒人，还是去Coursera上面上一课吧，系统地学一学对整体把握有好处。
+- 方方同学补充： [typesafe activetor](http://www.typesafe.com/)上有不少代码模板，Twitter内部大量使用Scala并且开办了[Scala School](https://twitter.github.io/scala_school/index.html)
 
 ## Spark入门
 ![RDD操作](http://du00.qiniudn.com/网页配图-RDD操作.png)
 Spark简单说来就只是三步：Create (RDD)，Transform (RDD)和Action(非RDD)
 1. Create
 常见的创建方式有三种（均是从一个SparkContext实例开始）：
-- textFile
-- sequenceFile
-- parallize，从一个Scala Collection开始
+ - textFile
+ - sequenceFile
+ - parallize，从一个Scala Collection开始
 textFile/sequenceFile两个方法已经可以解决来自HDFS的所有类型的记录文件，parallize用于测试，读hbase等其它的，略麻烦，不是一条语句能搞定了。
 2. Transform
-- 基本的：map/filter
-- 处理key-value：groupByKey, reduceByKey, combineByKey等等
+ - 基本的：map/filter
+ - 处理key-value：groupByKey, reduceByKey, combineByKey等等
 这部分必须熟练掌握，PairRDDFunctions在`import org.apache.spark.SparkContext._`过后就可以自动的给类型是`RDD[(K, V)]`的rdd加上PairRDDFunctions里面的所有方法了。注意：Transform的输入是RDD，输出仍然是RDD。
 3. Action
 Action会完成RDD向基本数据类型的转换，结果不再是RDD，一般来说就是收集结果到driver结点或者直接写HDFS了。作为Hadoop的用户会一定要会使用`saveAsTextFile`和`saveAsSequeceFile`，收集结果用collect()或者reduce()到driver结点完成或其它操作。
