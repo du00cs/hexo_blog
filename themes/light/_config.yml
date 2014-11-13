@@ -47,7 +47,7 @@ fancybox: true
 CustomFont: true
 
 #google analytics id, e.g.UA-28532742-2
-google_analytics: 
+google_analytics: UA-56718947-1
 
 ##url of your rss
 ##it is highly recommanded to use rss plugins, https://github.com/hexojs/hexo-generator-feed
