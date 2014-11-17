@@ -12,7 +12,7 @@ categories:
 ## 函数式编程与命令式编程
 　　在这门课中我们要学习的是函数式编程(Functional Programming)，而与之对应的，也是我们更熟悉的命令式编程(Imperative Programming)。虽然完成的工作是一样的，但是背后的理念却大有不同。**命令式编程** 比如C/Java等其实都是反映的机器执行过程的语句流，很容易与机器指令对应上。函数式编程则对问题进行了一些抽象：In a restricted sense, functional programming (FP) means programming without **mutable variables（值可变的变量）**, **assignments（赋值）**, **loops（循环）**, and other imperative control structures. In a wider sense, functional programming means focusing on the functions.
 在这里直接引用一段[博文](http://coolshell.cn/articles/10822.html)更能阐释什么是函数式编程：
-
+<!-- more -->
 * 函数式编程的三大特性：
    * immutable data 不可变数据：像Clojure一样，默认上变量是不可变的，如果你要改变变量，你需要把变量copy出去修改。这样一来，可以让你的程序少很多Bug。因为，程序中的状态不好维护，在并发的时候更不好维护。（你可以试想一下如果你的程序有个复杂的状态，当以后别人改你代码的时候，是很容易出bug的，在并行中这样的问题就更多了）
    * first class functions：这个技术可以让你的函数就像变量一样来使用。也就是说，你的函数可以像变量一样被创建，修改，并当成变量一样传递，返回或是在函数中嵌套函数。这个有点像Javascript的Prototype（参看Javascript的面向对象编程）
