@@ -76,7 +76,7 @@ object test {
   ab.reduce((x, y) => if (x > y) x else y)        //> res11: Int = 6
 }
 ```
-<!-- more -->
+
 一种是“对集合中的每个东西，东西在哪儿，取出来，执行某个操作”，另一种是“对一个集合中的每一个元素执行操作”。
 具体的函数式编程与命令式编程语言的区别网上铺天盖地的，推荐一篇精简（是否得当就不评论了）的介绍（我自己参考写的……）《[课程学习Couresera - Functional Programming Principles in Scala - Week 1](/2014/11/11/课程学习Couresera-Functional-Programming-Principles-in-Scala-Week-1)》
 
@@ -106,87 +106,87 @@ Action会完成RDD向基本数据类型的转换，结果不再是RDD，一般�
 ## Spark工程
 建一个maven工程，pom里面写上
 ```xml
-	<dependencies>
-		<dependency>
-			<groupId>org.apache.hadoop</groupId>
-			<artifactId>hadoop-client</artifactId>
-			<version>2.4.0-mdh2.0.5</version>
-			<type>jar</type>
-			<scope>compile</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>asm</groupId>
-					<artifactId>asm</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.jboss.netty</groupId>
-					<artifactId>netty</artifactId>
-				</exclusion>
-				<exclusion>
-					<artifactId>servlet-api</artifactId>
-					<groupId>javax.servlet</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.spark</groupId>
-			<artifactId>spark-core_2.10</artifactId>
-			<version>1.1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.8.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.scalatest</groupId>
-			<artifactId>scalatest_2.10</artifactId>
-			<version>2.2.1</version>
-			<scope>test</scope>
-		</dependency>
-		<!-- <dependency> -->
-		<!-- <groupId>com.typesafe.akka</groupId> -->
-		<!-- <artifactId>akka-actor_2.10</artifactId> -->
-		<!-- <version>2.3.3</version> -->
-		<!-- </dependency> -->
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<version>2.4</version>
-		</dependency>
-		<!-- <dependency> -->
-		<!-- <groupId>org.json4s</groupId> -->
-		<!-- <artifactId>json4s-native_2.10</artifactId> -->
-		<!-- <version>3.2.11</version> -->
-		<!-- </dependency> -->
-	</dependencies>
+<dependencies>
+  <dependency>
+    <groupId>org.apache.hadoop</groupId>
+    <artifactId>hadoop-client</artifactId>
+    <version>2.4.0-mdh2.0.5</version>
+    <type>jar</type>
+    <scope>compile</scope>
+    <exclusions>
+      <exclusion>
+        <groupId>asm</groupId>
+        <artifactId>asm</artifactId>
+      </exclusion>
+      <exclusion>
+        <groupId>org.jboss.netty</groupId>
+        <artifactId>netty</artifactId>
+      </exclusion>
+      <exclusion>
+        <artifactId>servlet-api</artifactId>
+        <groupId>javax.servlet</groupId>
+      </exclusion>
+    </exclusions>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.spark</groupId>
+    <artifactId>spark-core_2.10</artifactId>
+    <version>1.1.0</version>
+  </dependency>
+  <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.8.1</version>
+    <scope>test</scope>
+  </dependency>
+  <dependency>
+    <groupId>org.scalatest</groupId>
+    <artifactId>scalatest_2.10</artifactId>
+    <version>2.2.1</version>
+    <scope>test</scope>
+  </dependency>
+  <!-- <dependency> -->
+  <!-- <groupId>com.typesafe.akka</groupId> -->
+  <!-- <artifactId>akka-actor_2.10</artifactId> -->
+  <!-- <version>2.3.3</version> -->
+  <!-- </dependency> -->
+  <dependency>
+    <groupId>joda-time</groupId>
+    <artifactId>joda-time</artifactId>
+    <version>2.4</version>
+  </dependency>
+  <!-- <dependency> -->
+  <!-- <groupId>org.json4s</groupId> -->
+  <!-- <artifactId>json4s-native_2.10</artifactId> -->
+  <!-- <version>3.2.11</version> -->
+  <!-- </dependency> -->
+</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>2.3</version>
-				<configuration>
-					<artifactSet>
-						<includes>
-							<include></include>
-						</includes>
-					</artifactSet>
-				</configuration>
+<build>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-shade-plugin</artifactId>
+      <version>2.3</version>
+      <configuration>
+        <artifactSet>
+          <includes>
+            <include></include>
+          </includes>
+        </artifactSet>
+      </configuration>
 
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>shade</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+      <executions>
+        <execution>
+          <phase>package</phase>
+          <goals>
+            <goal>shade</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
+</build>
 ```
 
 下面是一个代码实例，完成的工作是将格式为

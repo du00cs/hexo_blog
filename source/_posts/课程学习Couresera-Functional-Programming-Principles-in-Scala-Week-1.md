@@ -1,4 +1,4 @@
-title: 课程学习Couresera - Functional Programming Principles in Scala - Week 1
+title: Functional Programming Principles in Scala - Week 1
 date: 2014-11-11 17:26:23
 tags: 
 - Coursera
@@ -9,10 +9,11 @@ categories:
 *老文章了，正好是用Markdown写的，直接贴过来了*
 > 本来以为这只是一门编程语言的课，还是比较犹豫是否要学习。不想学习新语言也是缘于在本科的时候学“计算机考古学语言”COBOL之后留下的后遗症。上完第一周的课程再加上完成作业才发现我的想法完全错了——老师不仅仅是在教一门语言，还在推销一种编程思想——函数式编程。
 
+　　自从全球刮起了MOOC风，学习（尤其是入门）就变得简单多了，很难想象分文不花就可以跟着优秀的老师学习前沿课程。还记得以前下的Machine Learning的视频，没有字幕就算了（还能勉强听懂），那昏暗的视频、需要偷偷去找的讲义以及令人捉急的黑板板书……不得不承认这是个好时代，只要愿意学习，各种机会总是能够提供给你。我也在论坛见过了不少跟我一样的学生，在工作之余坚持上一两门课，有时候作业还真不是那么简单。为自己的努力加油吧～学了有什么用？也许没什么用，但是至少可以保持学习心态。
+
 ## 函数式编程与命令式编程
 　　在这门课中我们要学习的是函数式编程(Functional Programming)，而与之对应的，也是我们更熟悉的命令式编程(Imperative Programming)。虽然完成的工作是一样的，但是背后的理念却大有不同。**命令式编程** 比如C/Java等其实都是反映的机器执行过程的语句流，很容易与机器指令对应上。函数式编程则对问题进行了一些抽象：In a restricted sense, functional programming (FP) means programming without **mutable variables（值可变的变量）**, **assignments（赋值）**, **loops（循环）**, and other imperative control structures. In a wider sense, functional programming means focusing on the functions.
 在这里直接引用一段[博文](http://coolshell.cn/articles/10822.html)更能阐释什么是函数式编程：
-<!-- more -->
 * 函数式编程的三大特性：
    * immutable data 不可变数据：像Clojure一样，默认上变量是不可变的，如果你要改变变量，你需要把变量copy出去修改。这样一来，可以让你的程序少很多Bug。因为，程序中的状态不好维护，在并发的时候更不好维护。（你可以试想一下如果你的程序有个复杂的状态，当以后别人改你代码的时候，是很容易出bug的，在并行中这样的问题就更多了）
    * first class functions：这个技术可以让你的函数就像变量一样来使用。也就是说，你的函数可以像变量一样被创建，修改，并当成变量一样传递，返回或是在函数中嵌套函数。这个有点像Javascript的Prototype（参看Javascript的面向对象编程）
