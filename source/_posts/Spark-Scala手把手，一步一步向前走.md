@@ -1,9 +1,9 @@
 title: Spark/Scala手把手，一步一步向前走
 date: 2014-11-11 15:09:26
-tags: 
+tags:
 - Spark
 - Scala
-categories: 
+categories:
 - Spark
 ---
 Spark/Scala的一点入门材料，希望能对想快速了解的人有所帮助，对自己则是一个备忘。
@@ -14,7 +14,7 @@ Spark/Scala的一点入门材料，希望能对想快速了解的人有所帮助
 package com.xiaomi.data.ctr.feature.analysis
 
 /**
- * Scala极速入门材料
+ * Scala极速入门材料，可以直接贴入ScalaIDE的worksheet
  */
 object test {
   println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
@@ -50,7 +50,7 @@ object test {
   m.take(2)                                       //> res5: scala.collection.immutable.Map[String,Int] = Map(a -> 1, c -> 2)
   m("a")                                          //> res6: Int = 1
   //删除一个键，得到一个新的map
-  m - "a"                                         //> res7: scala.collection.immutable.Map[String,Int] = Map(c -> 2, b -> 3, d -> 
+  m - "a"                                         //> res7: scala.collection.immutable.Map[String,Int] = Map(c -> 2, b -> 3, d ->
                                                   //| 4)
 
   //函数：变量名在前、类型在后，函数头到函数体之间有“=”号
@@ -83,7 +83,7 @@ object test {
 ## Scala相关资料
 - 以后最常用的是会是这个：[Scala Standard Library API Docs](http://www.scala-lang.org/api/current/#package)，也许你会觉得看完也不知道毡哪个，但是你确实得依赖它。
 - 书籍：多看上面是有本书的——《[Scala程序设计：Java虚拟机多核编程实战](http://www.duokan.com/book/68639)》，其它的还有很多，如《**Scala for the Impatient**》，《**Programming in Scala: A comprehensive Step-by-step Guide**》
-- [Coursera](https://class.coursera.org)上有一门用Scala讲的函数式编程语言的课——*Functional Programming Principles in Scala*，需要注意的是可能从头学到尾都不知道还有`var`这个东西，因为这门课真的只讲函数式编程。另外，请不要惊讶做作业需要花很长时间。   
+- [Coursera](https://class.coursera.org)上有一门用Scala讲的函数式编程语言的课——*Functional Programming Principles in Scala*，需要注意的是可能从头学到尾都不知道还有`var`这个东西，因为这门课真的只讲函数式编程。另外，请不要惊讶做作业需要花很长时间。
 如果你是跟我一样的懒人，还是去Coursera上面上一课吧，系统地学一学对整体把握有好处。
 - 方方同学补充： [typesafe activetor](http://www.typesafe.com/)上有不少代码模板，Twitter内部大量使用Scala并且开办了[Scala School](https://twitter.github.io/scala_school/index.html)
 
