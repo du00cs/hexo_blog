@@ -7,13 +7,13 @@ categories:
 - 工具
 ---
 
-　　美化调整其实中重头戏，但是对于像我这种不懂html/js的人，美化就只有两步：
+　　美化调整其实是重头戏，但是对于像我这种不懂Html/JS的人来说美化就只有两步：
 1. 使用别人的主题
-2. 调参——对各项自己不喜欢的参数进行修改
-这部分的内容非常杂，大多数都是在耗时在反复对比上。
+2. 调参——对各项参数进行微调
+这部分的内容比较繁杂，大多数都是在耗在反复对比上了。
 
 ## 应用主题
-　　hexo爱好者DIY了很多各式[各样的主题](https://github.com/hexojs/hexo/wiki/Themes)，并且还分享出来了。有很多非常酷的，可以一一尝试。安装方法很简单，比如要安装`metro-light`，在博客的主目录下执行
+　　Hexo的爱好者们DIY了很多各式各样的[主题](https://github.com/hexojs/hexo/wiki/Themes)，并且还分享出来了。有很多非常的酷，可以尝试尝试。安装方法很简单，比如要安装`metro-light`，在博客的主目录下执行
 ```sh
 git clone https://github.com/halfer53/metro-light.git themes/metro-light
 ```
@@ -21,7 +21,7 @@ git clone https://github.com/halfer53/metro-light.git themes/metro-light
 > 注意：如果用GitHub来同步整个博客，记得把**themes/metro-light**下的**.git**文件夹删掉。
 
 ## 配置参数
-　　参数配置很简单，作者都留好入口了。首先要注意区分根目录和主题目录下的各有一个`_config.yml`文件，参数需要分别在两个地方进行配置。
+　　参数配置很简单，作者都留好了入口，挨个填就可以 了。首先要注意区分根目录和主题目录下的各有一个`_config.yml`文件，参数需要分别在两个地方进行配置。
 - 配置主目录_config.xml
 　　主目录的_config.xml的配置不能够马上反映的本地站点(`hexo s`)上，需要`hexo g`一次，主题内的配置文件修改完就可以在网页上刷新看到。下面列出了至少需要配置的内容，按自己的情况一一修改，不放心就本地预览。
 
