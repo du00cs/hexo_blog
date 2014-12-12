@@ -1,4 +1,4 @@
-title: Spark/Scala手把手，一步一步向前走
+title: Spark/Scala极速入门材料
 date: 2014-11-11 15:09:26
 tags:
 - Spark
@@ -145,21 +145,11 @@ Action会完成RDD向基本数据类型的转换，结果不再是RDD，一般�
     <version>2.2.1</version>
     <scope>test</scope>
   </dependency>
-  <!-- <dependency> -->
-  <!-- <groupId>com.typesafe.akka</groupId> -->
-  <!-- <artifactId>akka-actor_2.10</artifactId> -->
-  <!-- <version>2.3.3</version> -->
-  <!-- </dependency> -->
   <dependency>
     <groupId>joda-time</groupId>
     <artifactId>joda-time</artifactId>
     <version>2.4</version>
   </dependency>
-  <!-- <dependency> -->
-  <!-- <groupId>org.json4s</groupId> -->
-  <!-- <artifactId>json4s-native_2.10</artifactId> -->
-  <!-- <version>3.2.11</version> -->
-  <!-- </dependency> -->
 </dependencies>
 
 <build>
@@ -181,6 +171,21 @@ Action会完成RDD向基本数据类型的转换，结果不再是RDD，一般�
           <phase>package</phase>
           <goals>
             <goal>shade</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+
+    <!-- maven的scala支持插件，适当的时候可以去用一用新的版本 -->
+    <plugin>
+      <groupId>net.alchim31.maven</groupId>
+      <artifactId>scala-maven-plugin</artifactId>
+      <version>3.1.3</version>
+      <executions>
+        <execution>
+          <goals>
+            <goal>compile</goal>
+            <goal>testCompile</goal>
           </goals>
         </execution>
       </executions>
