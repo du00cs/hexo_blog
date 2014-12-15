@@ -6,7 +6,11 @@ article
   a:hover
     color #000
 
-  font-weight 300
+  font-weight 400
+  font-family Georgia,Cambria,serif
+  line-height 2rem
+  color #373D49
+  font 1rem
   &.page
     padding-left 20px
     .icon
@@ -78,11 +82,14 @@ article
             color #000
             text-decoration none
       ul
-        margin-top 3px
-        list-style none
+        margin-bottom .83999rem
+        padding-top .16001rem
+        list-style-type disc
+        font-weight 400
+        line-height 2rem
         li
-          margin-right 15px
-          display inline
+          margin-left 1rem
+          display list-item
           @media screen and (max-width: 768px)
             display block
             font-size 0.8em
@@ -148,20 +155,22 @@ article
         right 10px
 
   .entry
-    text-align left 
+    text-align left
     line-height 1.5
     letter-spacing 0.01rem
 
     p
       word-wrap break-word
+      font-size 1rem
 
     blockquote
-      border-top 1px solid color-border
-      border-bottom 1px solid color-border
       font-style italic
       font-family font-serif
-      font-size 1.2em
-      padding 0 30px 15px
+      font-size 1rem
+      border-left 3px solid #A0AABF
+      padding .66001rem 1rem 1rem
+      margin-bottom .33999rem
+      padding-top .66001rem
       text-align left
       footer
         border-top none
@@ -233,18 +242,42 @@ article
         border-radius 0
 
     ul, ol, dl
-      margin-left 20px
-      ul, ol, dl
-        margin-top 0
+      margin-bottom .83999rem
+      padding-top .16001rem
+      font-weight 400
+      line-height 2rem
 
-    h1, h2
-      font-weight normal
-      border-bottom 1px solid color-border
-      padding-bottom 10px
-      margin-top 20px
+    ol
+      list-style-type decimal
+      li
+        margin-left 1rem
+        display list-item
 
-    h3, h4, h5, h6
-      font-weight normal
+
+    h1
+      font-size 2.05714rem
+      margin-bottom .21999rem
+      padding-top .78001rem
+      line-height 3rem
+
+    h2
+      font-size 1.95312rem
+      margin-bottom .18358rem
+      padding-top .81642rem
+
+    h3
+      font-size 1.64571rem
+      margin-bottom .07599rem
+      padding-top .92401rem
+
+    h2, h3
+      line-height 3rem
+
+    h1, h2, h3, h4, h5, h6
+      font-family "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif
+      font-weight 600
+      font-style nomal
+      margin-top 0
 
     img, video
       max-width 100%
