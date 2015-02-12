@@ -24,4 +24,5 @@ date: "2014-12-15 10:59"
 转换很简单，但是不知道就很要命。
 ```scala
 i:Int => i:java.lang.Integer
+111
 ```
