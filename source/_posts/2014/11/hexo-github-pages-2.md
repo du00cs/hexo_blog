@@ -21,8 +21,8 @@ categories:
 ```sh
 hexo new [layout] title
 ```
-　　layout不写默认就是post，会在source/_posts中创建以title命名的文件title.md，整个写博客的过程就是编辑符合markdown规范的文本。这也是hexo/jeklly号称能够让用户更专注的内容生产的原因。
-　　即将发布的文章layout为post没有问题，但是也如果修改了一篇需要重新发布，而另外一篇才写了一半，这时就需要做些区分了。这时可以选layout为draft，文件就会被放到source/_draft中，在生成页面时会忽略这个目录，最后再文章完成之后再拖动文件到_posts中或者
+　　layout不写默认就是post，会在`source/_posts`中创建以title命名的文件title.md，整个写博客的过程就是编辑符合markdown规范的文本。这也是hexo/jeklly号称能够让用户更专注的内容生产的原因。
+　　即将发布的文章layout为post没有问题，但是也如果修改了一篇需要重新发布，而另外一篇才写了一半，这时就需要做些区分了。这时可以选layout为draft，文件就会被放到`source/_draft`中，在生成页面时会忽略这个目录，最后再文章完成之后再拖动文件到_posts中或者
 ```sh
 hexo publish [layout] <filename>
 ```

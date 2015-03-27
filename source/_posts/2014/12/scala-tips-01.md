@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scala点点滴滴-JSON/正则
+title: Scala点点滴滴-JSON/正则/命令行解析
 date: "2014-12-01 17:11"
 ---
 
@@ -89,7 +89,7 @@ val date = """(\d\d\d\d)-(\d\d)-(\d\d)""".r
 ```
 
 # 3. 命令行解析
-　　首先，如果你已经熟悉一个java版的并且没有时间（不想）学，那直接用就好了。其次，如果时间足够可以去比较比较scala各种各样的命令行解析包，这里只介绍scopt。scopt确实是很简洁以及简单的，直接上例子了：
+　　首先，如果你已经熟悉一个java版的并且没有时间（不想）学，那直接用就好了。其次，如果时间足够可以去挨个挨个比较比较scala各种各样的命令行解析包。这里只介绍scopt，scopt确实是很简洁以及简单的，直接上例子了：
 ```scala
 //所有参数都需要有默认值，这样才能无参初始化一个实例
 case class Config(logBase: String = ".",
@@ -131,6 +131,17 @@ val parser = new scopt.OptionParser[Config]("run") {
   } text ("保存文件块的数量")
 }
 ```
+上面是解析部分，调用见下：
+```scala
+def main(args: Array[String]): Unit = {
+  parser.parse(args, Config()) map { config ⇒
+    //config已经获取到了
+  } getOrElse {
+    //额外的错误处理逻辑，默认会把命令行帮助打印出来
+  }
+}
+```
+
 [scopt](https://github.com/scopt/scopt)在github的官网上还有很复杂的例子，我第一次就是被它吓住了。scopt使用时的maven坐标
 ```xml
 <dependency>
