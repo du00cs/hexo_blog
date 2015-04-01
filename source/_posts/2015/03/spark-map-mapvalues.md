@@ -9,7 +9,9 @@ categories:
 ---
 　　有时候觉得会不会从来没看过源码会是种遗憾，尝试着去看spark源码时又发现看不懂……
 
-map和mapValues的区别其实很大，
+map和mapValues的区别其实很大，最重要的区别是mapValues只对Tuple2的第二个元素进行操作，保留第一个元素key不变（废话）。什么时候用mapValues更好呢？在不改变数据分区的情况下对数据进行一些转换操作，避免在进一步的join/reduce之类的操作中产生不必要的shuffle开销。
+
+map的相关代码在RDD中，值得注意的是其中的partitioner变量是带有`@transient`标记的，标记的具体解释可以参照
 ```scala
 //RDD中的partitioner
   /** Optionally overridden by subclasses to specify how they are partitioned. */
