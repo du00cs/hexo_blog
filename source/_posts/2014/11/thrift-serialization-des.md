@@ -1,9 +1,10 @@
 title: Thrift序列化/反序列化方法对比
 date: 2014-11-20 20:00:52
-tags: 
+tags:
 - Java
+- Scala
 categories:
-- Java 
+- Java
 ---
 
 还记得最初到公司的时候thrift序列化还是用的JSON模式，现在想想效率还是太低了。先上结论部分
@@ -35,6 +36,8 @@ struct STestObject{
      4: list<i32> pos;  
 }
 ```
+
+<!-- more >
 
 填充数据的方法
 ```scala

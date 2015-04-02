@@ -67,5 +67,5 @@ theme: metro-light
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type: metro-light
+  type: git
   repo: https://github.com/du00cs/du00cs.github.io.git

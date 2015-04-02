@@ -4,6 +4,7 @@ title: Spark问题备忘
 date: "2014-12-12 17:46"
 tags:
 - Spark
+- Scala
 categories:
 - Spark
 ---
@@ -28,6 +29,8 @@ categories:
 4. **IDE在Build workspace时缓慢、报内存不够**  
 　　调整最大内存分配。这个还是很有必要的，`菜单栏->Scala->Run Setup Diagnostics->选中Use recommended default settings`，如果Heap settings中的有1.5G以上就不用改了，如果有需要，修改eclipse.ini（去安装文件夹下找，把512m改成2048m）即可。
 
+
+<!-- more >
 
 ### 2. org.apache.spark.SparkException: Error communicating with MapOutputTracker
 　　问题：少量数据可以运行成功，而数据量放大到数十倍之后运行失败并报这个错。下面是官方对[spark.akka.frameSize](http://spark.apache.org/docs/latest/configuration.html)这个参数的解释

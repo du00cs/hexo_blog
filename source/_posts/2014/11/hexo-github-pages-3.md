@@ -25,6 +25,8 @@ git clone https://github.com/halfer53/metro-light.git themes/metro-light
 - 配置主目录_config.xml
 　　主目录的_config.xml的配置不能够马上反映的本地站点(`hexo s`)上，需要`hexo g`一次，主题内的配置文件修改完就可以在网页上刷新看到。下面列出了至少需要配置的内容，按自己的情况一一修改，不放心就本地预览。
 
+<!-- more >
+
 ```yaml
 # Site
 title: Oh Captain, My Captain - Du00

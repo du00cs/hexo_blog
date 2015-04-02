@@ -55,7 +55,7 @@
 
   <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
-  
+
   <style type="text/css">
   /* Tim Pietrusky advanced checkbox hack (Android <= 4.1.2) */
 body{ -webkit-animation: bugfix infinite 1s; }
@@ -68,7 +68,7 @@ body{ -webkit-animation: bugfix infinite 1s; }
   <% } %>
 
   <% if(theme.formatted_abstract) { %>
-    article .post-content-index .entry{max-height: 550px; overflow:hidden;}
+    article .post-content-index .entry{ overflow:hidden;}
   <% } %>
 </style>
 

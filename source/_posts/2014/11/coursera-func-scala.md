@@ -1,15 +1,17 @@
 title: Functional Programming Principles in Scala - Week 1
 date: 2014-11-11 17:26:23
-tags: 
+tags:
 - Coursera
 - Scala
-categories: 
+categories:
 - 笔记
 ---
 *老文章了，正好是用Markdown写的，直接贴过来了*
 > 本来以为这只是一门编程语言的课，还是比较犹豫是否要学习。不想学习新语言也是缘于在本科的时候学“计算机考古学语言”COBOL之后留下的后遗症。上完第一周的课程再加上完成作业才发现我的想法完全错了——老师不仅仅是在教一门语言，还在推销一种编程思想——函数式编程。
 
 　　自从全球刮起了MOOC风，学习（尤其是入门）就变得简单多了，很难想象分文不花就可以跟着优秀的老师学习前沿课程。还记得以前下的Machine Learning的视频，没有字幕就算了（还能勉强听懂），那昏暗的视频、需要偷偷去找的讲义以及令人捉急的黑板板书……不得不承认这是个好时代，只要愿意学习，各种机会总是能够提供给你。我也在论坛见过了不少跟我一样的学生，在工作之余坚持上一两门课，有时候作业还真不是那么简单。为自己的努力加油吧～学了有什么用？也许没什么用，但是至少可以保持学习心态。
+
+<!-- more >
 
 ## 函数式编程与命令式编程
 　　在这门课中我们要学习的是函数式编程(Functional Programming)，而与之对应的，也是我们更熟悉的命令式编程(Imperative Programming)。虽然完成的工作是一样的，但是背后的理念却大有不同。**命令式编程** 比如C/Java等其实都是反映的机器执行过程的语句流，很容易与机器指令对应上。函数式编程则对问题进行了一些抽象：In a restricted sense, functional programming (FP) means programming without **mutable variables（值可变的变量）**, **assignments（赋值）**, **loops（循环）**, and other imperative control structures. In a wider sense, functional programming means focusing on the functions.
@@ -37,13 +39,13 @@ categories:
 　　表达式和表达式的计算，不需要专门去学，直接看以下例子就明白了。
 ```scala
     def size = 2 //定义常量
-    
+
     def power(x: Double, y: Int): Double = ... //定义函数
-    
+
     def abs(x: Int) = if (x >= 0) x else -x //if-else
-    
+
     val x = 2 //变量定义
-    
+
     def sqrt(x: Double) = { //语句是可以{}表示语句块的，参数x对块中的函数来说是可见的
         def sqrtIter(guess: Double, x: Double): Double =
             if (isGoodEnough(guess, x)) guess

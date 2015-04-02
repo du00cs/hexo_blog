@@ -77,6 +77,8 @@ object test {
 }
 ```
 
+<!-- more >
+
 一种是“对集合中的每个东西，东西在哪儿，取出来，执行某个操作”，另一种是“对一个集合中的每一个元素执行操作”。
 具体的函数式编程与命令式编程语言的区别网上铺天盖地的，推荐一篇精简（是否得当就不评论了）的介绍（我自己参考写的……）《[课程学习Couresera - Functional Programming Principles in Scala - Week 1](/2014/11/11/课程学习Couresera-Functional-Programming-Principles-in-Scala-Week-1)》
 

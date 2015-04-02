@@ -2,6 +2,10 @@
 layout: post
 title: Scala点点滴滴-JSON/正则/命令行解析
 date: "2014-12-01 17:11"
+tags:
+- Scala
+categories:
+- Scala
 ---
 
 # 1. JSON处理包
@@ -32,6 +36,7 @@ val deviceInfo = parse(s, false).extract[Map[String, String]]
 println(deviceInfo)
 // Map(e -> 4.4.2, a -> , b -> mobile, c -> dior, d -> stable)
 ```
+<!-- more >
 
 　　官方文档中还有个抽取成对象的例子，各取所需吧～（反正我只需要上面的……）
 

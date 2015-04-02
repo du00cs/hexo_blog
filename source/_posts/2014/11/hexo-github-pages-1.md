@@ -23,6 +23,8 @@ categories:
 2. hexo
 3. git/github
 
+<!-- more >
+
 ### 2.1 安装chocolatey
 　　[chocolatey](https://chocolatey.org)是面向Windows的类apt/yum/brew这样的包管理工具，有了这么个好东西Windows下配置编程环境就不会再那么复杂了。在命令行（在Power Shell中执行引号中的内容在我的机器上会出错）中贴上以下语句
 ```sh

@@ -27,6 +27,9 @@ hexo new [layout] title
 hexo publish [layout] <filename>
 ```
 就可以了。
+
+<!-- more >
+
 ### 1.2 生成页面
 ```sh
 hexo clean #如果觉得页面比较诡异，这个命令将清除生成的页面

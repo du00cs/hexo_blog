@@ -8,11 +8,11 @@ widgets:
 - category
 - tag
 
-excerpt_link: Continue Reading
+excerpt_link: 点击更多
 
 comment:
   duoshuo: true
-  duoshuo_short_name: du00cs 
+  duoshuo_short_name: du00cs
 ## to enable disqus, you need to fill in the disqus_shortname in config.yml
 ## to enable duoshuo, you need duoshuo id and set duosuo to true
 
@@ -38,7 +38,7 @@ logo:
 
 #your personal page, could be your github account page, twitter or google plus personal page
 ## By default its your homepage
-personal_site: 
+personal_site:
 
 fancybox: true
 
@@ -52,7 +52,7 @@ google_analytics: UA-56718947-1
 ##it is highly recommanded to use rss plugins, https://github.com/hexojs/hexo-generator-feed
 rss: ##e.g. https://ffff.github.io/rss2.xml
 
-##if false, the abstract for each article in homepage is in plain text, with a limitation of 800 characters. 
+##if false, the abstract for each article in homepage is in plain text, with a limitation of 800 characters.
 ##if true, the homepage will display the whole formatted article
 formatted_abstract: true
 
