@@ -77,8 +77,6 @@ object test {
 }
 ```
 
-<!-- more >
-
 一种是“对集合中的每个东西，东西在哪儿，取出来，执行某个操作”，另一种是“对一个集合中的每一个元素执行操作”。
 具体的函数式编程与命令式编程语言的区别网上铺天盖地的，推荐一篇精简（是否得当就不评论了）的介绍（我自己参考写的……）《[课程学习Couresera - Functional Programming Principles in Scala - Week 1](/2014/11/11/课程学习Couresera-Functional-Programming-Principles-in-Scala-Week-1)》
 
@@ -107,6 +105,7 @@ Action会完成RDD向基本数据类型的转换，结果不再是RDD，一般�
 
 ## Spark工程
 建一个maven工程，pom里面写上
+
 ```xml
 <dependencies>
   <dependency>
@@ -199,6 +198,7 @@ Action会完成RDD向基本数据类型的转换，结果不再是RDD，一般�
 下面是一个代码实例，完成的工作是将格式为
 `label    pos1:value1 pos2:value2 ... post:valuen#imei,appid`
 的样本文件中去掉`0, 37, 38, 39, 51`五列的值。
+
 ```scala
 package demo
 
@@ -269,6 +269,7 @@ object SampleReduction {
 ```
 
 IDE之类的操作训不在讲解范围之内了，打包好之后用以下语句执行即可（主jar包后而一定只有程序参数，或其它参数都向前站）：
+
 ```bash
 spark-submit \
     --master yarn-client \
@@ -280,6 +281,7 @@ spark-submit \
     各种参数
 ```
 可以在工程下而建一个脚本来省去一些公共参数的填写
+
 ```bash
 #!/bin/bash
 
